@@ -1,13 +1,284 @@
-body {
+*{
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  background-color: #9356f5;
+  width: 100%;
+}
+
+h3 {
+  font-size: 2rem;
+}
+
+.root {
+  width: 100vw;
+}
+
+.container {
+  background-color: #fff;
+  margin: 2em 0.75em;
+  border-radius: 5px;
+  min-height: 90vh;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em 0.5em;
+}
+
+.reset-button,
+.reset-filter-button {
+  background-color: #cbf5da;
+  border: none;
+  padding: 0.3em 0.75em;
+  border-radius: 30px;
+  color: #144d2e;
+}
+
+.style-reset {
+  margin: 0 0.2em;
+}
+
+.form-field {
+  padding: 1em 0.5em;
+  margin: 1em 0;
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 0.5em;
+}
+
+input[type=text] {
+  width: 85%;
+  padding: 5px 10px;
+  font-size: 1.25rem;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid #c1c5c9;
+}
+
+input:focus {
+    outline: none;
+    border-bottom: 2px solid #282928;
+}
+
+.todo-button {
+  cursor: pointer;
+  background-color: #cbf5da;
+  border: none;
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+}
+
+
+.fa-plus-square,
+.fa-trash {
+  color: #144d2e;
+}
+
+.todo-container {
+  padding: 0.5em;
+}
+
+.filter-container {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 2px solid #c1c5c9;
+  padding-bottom: 0.4em;
+}
+
+.filtering-list,
+.hashtag-style {
+  background-color: #d9c7f0;
+  color: #9356f5;
+  margin: 0 3px;
+  padding: 2px 4px;
+}
+
+.todo-card-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.todo-card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #e3e1e6;
+  width: 85%;
+  margin: 1em 0;
+  border: none;
+  border-radius: 10px;
+}
+
+.todo-card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+/* .for-filter{
+  border-bottom: 2px solid #c1c5c9;
+  padding: 3px 2px;
+} */
+
+.todo-card li {
+  list-style: none;
+  padding: 0.7em 0.3em;
+  position: relative;
+  font-size: 1.25rem;
+}
+
+/* .hashtag-style {
+  display: block;
+  z-index: 1;
+}
+
+.hashtag-style::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  content: ' ';
+} */
+
+.delete-button {
+  margin: 1em 0;
+  background-color: #cbf5da;
+  background-color: #cbf5da;
+  border: none;
+  padding: 0.2em 0.5em;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.completed-container {
+  margin: 0 0.75em;
+}
+
+.completed-heading {
+  font-size: 1.5rem;
+}
+
+
+.hidden {
+  display: none;
+}
+
+@media (min-width: 536px) {
+  h3 {
+    font-size: 2.2rem;
+  }
+
+  .container {
+    width: 80vw;
+    margin: 2rem auto;
+    border-radius: 5px;
+    min-height: 60vh;
+  }
+}
+
+@media (min-width : 732px) {
+  h3 {
+    font-size: 2.5rem;
+  }
+
+  .heading {
+    padding: 2em 1em;
+    margin: 1em;
+  }
+
+  .reset-button {
+    padding: 0.5em 1.1em;
+    font-size: 1.2rem;
+  }
+
+  .style-reset {
+    margin: 0 0.2em;
+  }
+
+  .form-field {
+    padding: 2em 1em;
+    margin: 1em;
+    padding-bottom: 1em;
+  }
+  
+  input[type=text] {
+    width: 90%;
+    padding: 10px 10px;
+    font-size: 1.5rem;
+  }
+  
+  .todo-button {
+    padding: 0.3em 0.8em;
+    border-radius: 10px;
+  }
+  
+  .todo-container {
+    padding: 2em 1em;
+    margin: 1em;
+    margin-bottom: 1.5rem;
+  }
+  
+  .filter-container {
+    padding-bottom: 0.8em;
+  }
+  
+  .reset-filter-button {
+    padding: 0.4em 1em;
+    font-size: 1.2rem;
+  }
+
+  .filtering-list,
+  .hashtag-style {
+    background-color: #d9c7f0;
+    color: #9356f5;
+    margin: 0 6px;
+    font-size: 1.4rem;
+  }
+  
+  .filter-text{
+    align-self: flex-end;
+  }
+  
+  .todo-card {
+    width: 90%;
+    margin: 1.3em 0;
+  }
+  
+  .todo-card li {
+    padding: 0.8em 0.5em;
+    font-size: 1.5rem;
+  }
+  
+  .delete-button {
+    margin: 1.3em 0;
+    padding: 0.2em 0.8em;
+  }
+  
+  .completed-container {
+    padding: 2em 1em;
+    margin: 1em;
+  }
+  
+  .completed-heading {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+}
+
+@media (min-width: 968px) {
+  .container {
+    width: 60vw;
+  }
+
+  .reset-button {
+    padding: 0.7em 1.5em;
+    font-size: 1.5rem;
+  }
 }
