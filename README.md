@@ -22,6 +22,7 @@ Please follow the following steps
 # Working
 
 - Empty todo list
+
 ![image](https://user-images.githubusercontent.com/84652121/130344431-260ed030-13e9-41bc-a0eb-29ab663996ba.png)
 
 
