@@ -6,7 +6,7 @@ const Todo = ({item, completed}) => {
     const {removeFromTodos, completedTodos, updateFilterArray} = useContext(Context);
 
     let str = item.text;
-    let re = /test|shopping|submission/gi;
+    let re = /test|shopping|submission|work|back-end|front-end|meeting/gi;
 
     let newStr = str.replace(re, (match) => { 
         console.log({match}); 
@@ -25,7 +25,7 @@ const Todo = ({item, completed}) => {
 
     const reactStringReplace = require('react-string-replace');
 
-    let replacedText = reactStringReplace(newStr, /#(\w+)/g, (match, i) => (
+    let replacedText = reactStringReplace(newStr, /#([\w-]+)/g, (match, i) => (
         <span key={match + i} className="hashtag-style" onClick={(e) => setFilter(e,match)}>#{match}</span>
     ));
 
