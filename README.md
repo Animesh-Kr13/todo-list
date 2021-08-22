@@ -19,6 +19,18 @@ Please follow the following steps
 - A **Reset Filter button** to clear the hashtags filter.
 - An **input button** to add a task in the todo list along with return-key.
 
+# List of Assumptions
+
+- An empty string is not allowed.
+- Pre-defined hashtags, which are commonly used in day-to-day life.
+
+# Unhandled edge cases
+
+-  Assuming that the user is entering a valid string in the todo list.
+-  A substring of a word matching the hashtag will be changed with the (#) infront of it.
+-  Example: Classtest will be converted to Class#test
+
+
 # Working
 
 - Empty todo list
