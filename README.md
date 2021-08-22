@@ -15,6 +15,6 @@ Please follow the following steps
 
 # Additional Features
 
-Added a **delete button** to delete a particular task from both the todo list and completed task list
-A **Reset Filter button** to clear the hashtags filter.
+- Added a **delete button** to delete a particular task from both the todo list and completed task list
+- A **Reset Filter button** to clear the hashtags filter.
 
