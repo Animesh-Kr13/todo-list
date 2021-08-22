@@ -23,6 +23,7 @@ Please follow the following steps
 
 - An empty string is not allowed.
 - Pre-defined hashtags, which are commonly used in day-to-day life.
+- Words in Hashtag include test, shopping, submission, work, back-end, front-end and meeting
 
 # Unhandled edge cases
 
