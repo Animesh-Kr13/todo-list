@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import {Context} from "../Context"
 
-const Todo = ({item}) => {
+const Todo = ({item, completed}) => {
 
     const {removeFromTodos, completedTodos, updateFilterArray} = useContext(Context);
 
@@ -32,6 +32,7 @@ const Todo = ({item}) => {
     return(
         <div className="todo-card-container">
             <div onClick={handleClick} className="todo-card">
+                <span className={`dot ${completed ? "completed-dot": ""}`}></span>
                 <li>{replacedText}</li> 
             </div>
              <button onClick={() => removeFromTodos(item.id)} className="delete-button"><i className="fas fa-trash fa-2x"></i></button> 

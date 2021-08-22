@@ -16,7 +16,7 @@ const Form = () => {
             alert("Please enter some task");
         } else {
             setTodos([
-                {text: inputText, completed: false, id: uuidv4()},
+                {text: inputText, id: uuidv4()},
                 ...todos
             ])
         }
@@ -26,12 +26,12 @@ const Form = () => {
     return (
         <form className="form-field">
             <input type="text" 
-                   class="todo-input" 
+                   className="todo-input" 
                    placeholder="+ Add a task"
                    value={inputText}
                    onChange={handleChange}/>
             <button onClick={handleSubmit} className="todo-button" type="submit">
-                <i class="fas fa-plus-square fa-2x"></i>
+                <i className="fas fa-plus-square fa-2x"></i>
             </button>
         </form>
     );

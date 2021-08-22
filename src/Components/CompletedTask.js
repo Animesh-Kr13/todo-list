@@ -17,11 +17,11 @@ const CompletedTask = () => {
         })
 
         taskData = sortedData.map(todo => (
-            <Todo key={todo.id} item={todo} />
+            <Todo key={todo.id} item={todo} completed={true}/>
         ))
     } else {
         taskData = completedTask.map(todo => (
-            <Todo key={todo.id} item={todo} />
+            <Todo key={todo.id} item={todo} completed={true}/>
         ))
     }
 

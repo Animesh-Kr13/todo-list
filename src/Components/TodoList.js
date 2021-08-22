@@ -22,21 +22,21 @@ const TodoList = () => {
         })
 
         todoData = sortedData.map(todo => (
-            <Todo key={todo.id} item={todo} />
+            <Todo key={todo.id} item={todo} completed={false} />
         ))
     } else {
         todoData = todos.map(todo => (
-            <Todo key={todo.id} item={todo} />
+            <Todo key={todo.id} item={todo} completed={false} />
         ))
     }
 
     return(
-        <div class="todo-container">
+        <div className="todo-container">
             <div className={`filter-container ${filterLength ? "" : "hidden"}`}>
                 <p className="filter-text">{filterData}</p>
                 <button onClick={() => refreshFilterArray()} className="reset-filter-button"><i className="fas fa-redo"></i> Reset filter</button>
             </div>
-            <ul class="todo-list">
+            <ul className="todo-list">
                 {todoData}
             </ul>
         </div>
